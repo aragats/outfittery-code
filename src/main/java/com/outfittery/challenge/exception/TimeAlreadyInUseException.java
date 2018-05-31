@@ -1,0 +1,15 @@
+package com.outfittery.challenge.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Time is already in use by another customer for that time ...")
+public class TimeAlreadyInUseException extends Exception {
+
+    private static final long serialVersionUID = 1300835871726788977L;
+
+    public TimeAlreadyInUseException(String message) {
+        super(message);
+    }
+
+}
